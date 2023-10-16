@@ -14,12 +14,18 @@
     }
 
     .container {
-        max-width: 1080px;
+        max-width: fit-content;
         margin: 0 auto;
     }
     </style>
     <body>
+        {% include 'nav-bar.html' %}
+        {% include 'cards.html' %}
+        <!--
+        <img class="img-fluid" id="banner" src="static/banner.jpg" alt="Banner Image">
+        -->
         <div class="container">
+            <!--
             <div class="row">
                 <div class="col-11">
                     <h1 class="text-center mt-2 mb-4">{{company}}</h1>
@@ -28,8 +34,7 @@
                     <p> experimental </p>
                 </div>
             </div>
-
-            <img class="img-fluid" id="banner" src="static/banner.jpg" alt="Banner Image">
+            -->
             <h2 class="text-center mt-4 mb-2">About {{company}}</h2>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <h2 class="text-center mt-2 mb-2">Job Openings</h2>
@@ -38,10 +43,11 @@
                     {% include 'jobitem.html' %}
                 {% endfor %}
             </div>
-            <div class="text-center">
+            <div class="text-center mt-4 mb-2">
             <button type="button" class="btn btn-primary btn-sm">Contact Us</button>
-            <p class="mt-4">Copyright: 2023, FPM</p>
+            
             </div>
         </div>
+        {% include 'footer.html' %}
     </body>
 </html>
