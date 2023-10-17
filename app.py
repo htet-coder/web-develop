@@ -1,4 +1,5 @@
-from flask import Flask, render_template, jsonify, url_for, redirect
+"""Module providing a function printing python version."""
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
